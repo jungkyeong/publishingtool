@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    width: 700px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.sliderinput{
+    display: flex;
+    width: 400%;
+    height: 600px;
+}
+
+.sliderinput > input{
+    display: none;
+}
+
+.slideimg{
+    width: 25%;
+    transition: 1s;
+}
+
+.slideimg > img{
+    width: 700px;
+    height: 600px;
+}
+
+.navi-label{
+    position: absolute;
+    width: 700px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.label-btn{
+    border: 3px solid greenyellow;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+.label-btn:not(:last-child){
+margin-right: 20px;
+}
+
+.label-btn:hover{
+    background-color: greenyellow;
+    transition: 1s;
+}
+
+#radio1:checked ~.wad{
+    margin-left: 0;
+}
+
+#radio2:checked ~.wad{
+    margin-left: -25%;
+}
+
+#radio3:checked ~.wad{
+    margin-left: -50%;
+}
+
+/*라벨과 겹쳐서 만듬*/
+
+.navi-auto{
+    position: absolute;
+    width: 700px;
+    margin-top: 560px;      /*각 플렉스 박스의 위치가 다르기에 조정*/
+    display: flex;
+    justify-content: center;
+    }
+
+    .navi-auto > div{
+    border: 3px solid greenyellow;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: 1s;
+    }
+
+    .navi-auto > div:not(:last-child){
+    margin-right: 20px;
+    }
+                /* hover되는 라디오 물들이기 */
+    #radio1:checked ~.navi-auto >.auto-btn1{
+    background: greenyellow;
+    }
+
+    #radio2:checked ~.navi-auto >.auto-btn2{
+    background: greenyellow;
+    }
+
+    #radio3:checked ~.navi-auto >.auto-btn3{
+        background-color: greenyellow;
+    }
